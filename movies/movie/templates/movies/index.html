@@ -1,0 +1,12 @@
+<h1>Movie List</h1>
+<br/>
+<ul>
+    {% for l in movies %}
+        <li><a href="/movie/{{ l.name }}/">{{ l.name }}</a></li>
+        <ul>
+            {% for c in l.courses %}
+                <li><a href="../../vak/{{ c }}">{{ c }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</ul>
